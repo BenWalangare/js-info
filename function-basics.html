@@ -1,0 +1,28 @@
+// https://javascript.info/function-basics
+
+// https://javascript.info/function-basics#function-pow-x-n
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let x = prompt("enter number");
+        let n = prompt("enter power intergers up from 1");
+        (n < 1) ? prompt("enter again intergers up from 1") : n;
+
+        function pow(x, n) {
+            return x ** n;
+        }
+
+        alert("Answer is " + pow(x, n));
+    </script>
+</body>
+
+</html>
