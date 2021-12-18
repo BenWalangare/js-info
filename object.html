@@ -6,8 +6,22 @@
     user.surename = "Smith";
     user.name = "Pete";
     delete user.name;
-    
     alert(user.name);
+
+    //https://javascript.info/object#check-for-emptiness
+    function isEmpty(schedule) {
+        for (let key in schedule) {
+            return false;
+        }
+        return true;
+    }
+
+    let schedule = {};
+    alert(isEmpty(schedule));
+
+    schedule['8:30'] = 'get up';
+    alert(isEmpty(schedule));
+
     // https://javascript.info/object#sum-object-properties
     let salaries = {
         John: 100,
@@ -19,6 +33,28 @@
     for (let key in salaries) {
         sum += salaries[key];
     }
-
     alert(sum); // 390
+
+    // https://javascript.info/object#multiply-numeric-property-values-by-2
+    function multiplyNumeric(obj) {
+        for (let key in obj) {
+
+            if (typeof obj[key] === 'number') {
+                console.log(obj[key]);
+                console.log(typeof (obj[key]));
+                obj[key] = obj[key] * 2;
+
+            }
+        }
+    }
+
+    let menu = {
+        width: 200,
+        height: 300,
+        title: 'myMenu',
+    };
+    console.log(menu);
+
+    multiplyNumeric(menu);
+    console.log(menu)
 </script>
